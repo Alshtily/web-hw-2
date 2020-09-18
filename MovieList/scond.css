@@ -1,0 +1,65 @@
+img {
+
+    width: 450px;
+}
+
+
+
+/* h1 {
+    font-size: 75px;
+} */
+
+#rate {
+    display: inline-block;
+}
+
+#ee {
+
+}
+
+
+
+.rate {
+
+
+
+    font-size: 100%;
+}
+
+.year {
+    font-size: 100%;
+}
+
+
+.sss {
+
+
+
+    width: 100px;
+    height: 50px;
+
+    font-size: x-large;
+
+    margin-bottom: 10px;
+    background-color: black;
+
+
+}
+
+
+
+.ss , .ss:active {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+
+    
+}
+
+
+iframe {
+
+  width: 500px;
+  margin-top: 25px;
+   margin-bottom: 50px;
+}
