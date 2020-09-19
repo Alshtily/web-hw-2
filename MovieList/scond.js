@@ -1,34 +1,59 @@
-
-
 function getCookie(name) {
-    function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }
-    var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
-    return match ? match[1] : null;
+  function escape(s) {
+    return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, "\\$1");
+  }
+  var match = document.cookie.match(
+    RegExp("(?:^|;\\s*)" + escape(name) + "=([^;]*)")
+  );
+  return match ? match[1] : null;
 }
 
+let ss = getCookie("index");
 
-let ss = getCookie("index")
-
-let BodyDiv = document.getElementById("body-div")
+let BodyDiv = document.getElementById("body-div");
 
 let MovieOpject = [
+  {
+    id: 1,
+    name: "Artemis Fowl",
+    ImgeSrc: "./img/1.jpg",
+    Rating: 7.4,
+    Year: 2009,
+    videoURL: "fl2r3Fwxz_o",
+  },
 
-  {"id":1,"name":"Artemis Fowl","ImgeSrc":"./img/1.jpg","Rating":7.4,"Year":2009,"videoURL":"fl2r3Fwxz_o"},
+  {
+    id: 2,
+    name: "Onword",
+    ImgeSrc: "./img/2.jpg",
+    Rating: 4.2,
+    Year: 2018,
+    videoURL: "gn5QmllRCn4",
+  },
 
-  {"id":2,"name":"Onword","ImgeSrc":"./img/2.jpg","Rating":4.2,"Year":2018,"videoURL":"gn5QmllRCn4"},
+  {
+    id: 3,
+    name: "Toy Story",
+    ImgeSrc: "./img/3.jpg",
+    Rating: 7.8,
+    Year: 2020,
+    videoURL: "wmiIUN-7qhE",
+  },
 
-  {"id":3,"name":"Toy Story","ImgeSrc":"./img/3.jpg","Rating":7.8,"Year":2020,"videoURL":"wmiIUN-7qhE"},
+  {
+    id: 4,
+    name: "Peter Rabbit",
+    ImgeSrc: "./img/4.jpg",
+    Rating: 7.8,
+    Year: 2018,
+    videoURL: "7Pa_Weidt08",
+  },
 ];
 
+if (ss !== null) {
+  let opject = MovieOpject[ss];
 
-
-if (ss !== null){
-
-  
-let opject = MovieOpject[ss]
-
-
-document.title = `${opject.name}`
+  document.title = `${opject.name}`;
   BodyDiv.innerHTML = `
 <br>
 <button class="sss" type="button"><a class="ss" href="./index.html">Back</a></button>
@@ -41,13 +66,13 @@ document.title = `${opject.name}`
     <div class="rate">
       
       <h1 id="rate">Rate :  </h1>   
-      <h1 id="rate"> <mark>  ${opject.Rating} </mark> </h1>
+      <h1 id="rate"> <mark class="mark">  ${opject.Rating} </mark> </h1>
     </div>
     
     <div class="year">
       
       <h1 id="rate">Year of production : </h1>
-      <h1 id="rate"> <mark>  2019 </mark> </h1>
+      <h1 id="rate"> <mark class="mark">  2019 </mark> </h1>
 <br>
 
 <h1 id="rate"> <a href="https://www.youtube.com/watch?v=${opject.videoURL}">Click To See Trailer In YouTube</a> </h1>
@@ -57,8 +82,6 @@ document.title = `${opject.name}`
     </div>
 
 
-`
- 
+`;
 } else {
-
 }
